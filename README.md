@@ -1,5 +1,5 @@
 # DumpsterFire
-Unfinished translations projects for:
-Mindseeker for NES / Famicom
-Seirei Gari for NES / Famicom
-Idea No Hi for SNES
+Unfinished translations projects for:<br>
+Mindseeker for NES / Famicom<br>
+Seirei Gari for NES / Famicom<br>
+Idea No Hi for SNES<br>
