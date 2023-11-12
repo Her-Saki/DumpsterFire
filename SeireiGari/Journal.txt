@@ -1,0 +1,2 @@
+Text is at 0x30400
+First dialogue at 0x343DB
