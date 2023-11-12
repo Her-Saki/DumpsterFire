@@ -1,0 +1,195 @@
+Atlas 1.11 by Klarth
+
+Parsing summary: 1 msecs
+Parsing - 0 error(s), 0 warning(s)
+
+Insertion summary: 15 msecs
+Insertion - 0 error(s), 0 warning(s)
+
++------------------------------------------------------------------------------
+| Block 1
+|   Start: Line 36  File Position $8A00  Bound $8FFF
+|   End: Line 50  File Position $8AE7
++------------------------------------------------------------------------------
+| Script size 231
+| Bytes Inserted 231
+| Space Remaining 1305
+|
+| Command Execution Listing
+|   DISABLE: 1
+|
+| Pointer Listing
+|   General Pointers Written: 0
+|   Autowrite Pointers Written: 1
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 2
+|   Start: Line 50  File Position $3023A
+|   End: Line 54  File Position $30248
++------------------------------------------------------------------------------
+| Script size 14
+| Bytes Inserted 14
+|
+| Command Execution Listing
+|   ACTIVETBL: 1
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 3
+|   Start: Line 54  File Position $30311
+|   End: Line 59  File Position $3032E
++------------------------------------------------------------------------------
+| Script size 29
+| Bytes Inserted 29
+|
+| Command Execution Listing
+|   ACTIVETBL: 1
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 4
+|   Start: Line 59  File Position $308A4
+|   End: Line 61  File Position $308A5
++------------------------------------------------------------------------------
+| Script size 1
+| Bytes Inserted 1
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 5
+|   Start: Line 61  File Position $308B4
+|   End: Line 63  File Position $308CC
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 6
+|   Start: Line 63  File Position $308D4
+|   End: Line 65  File Position $308EC
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 7
+|   Start: Line 65  File Position $308F4
+|   End: Line 67  File Position $3090C
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 8
+|   Start: Line 67  File Position $30914
+|   End: Line 69  File Position $3092C
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 9
+|   Start: Line 69  File Position $30934
+|   End: Line 71  File Position $3094C
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 10
+|   Start: Line 71  File Position $30954
+|   End: Line 73  File Position $3096C
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 11
+|   Start: Line 73  File Position $30974
+|   End: Line 75  File Position $3098C
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 12
+|   Start: Line 75  File Position $30994
+|   End: Line 77  File Position $309AC
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Block 13
+|   Start: Line 77  File Position $309B4
+|   End: Line 79  File Position $309CC
++------------------------------------------------------------------------------
+| Script size 24
+| Bytes Inserted 24
+|
+| Pointer Listing
+|   General Pointers Written: 0
++------------------------------------------------------------------------------
+
++------------------------------------------------------------------------------
+| Total Statistics
+| Script Size 491
+| Script Inserted 491
+|
+| Command Execution Listing
+| JMP: 12
+| JMP: 1
+| HDR: 1
+| ADDTBL: 3
+| ACTIVETBL: 3
+| PTRTBL: 1
+| AUTOWRITE: 1
+| CREATEPTR: 1
+| DISABLE: 1
+| Pointer Listing
+| Autowrite Pointers Written: 1
++------------------------------------------------------------------------------
+
+Execution time: 16 msecs

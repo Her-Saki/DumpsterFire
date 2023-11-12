@@ -1,0 +1,73 @@
+1/6:
+>Little endian pointers: $808C, $908C, etc.
+>Pointers recorded at $20 in RAM.
+>Looks like hardcoded pointers:
+	02:B5B1: A9 80     LDA #$80
+	02:B5B3: 85 20     STA $20 = #$40
+	02:B5B5: A9 8C     LDA #$8C
+	02:B5B7: 85 21     STA $21 = #$8D
+>Yes, EVERY pointer is hardcoded... Fuck.
+>Expanded the rom. It works.
+>This game is mapper 106.
+>Pointer for "This is the computer!"
+$B03D: A9 4A     LDA #$4A
+$B03F: 85 20     STA $20 = #$01
+$B041: A9 8C     LDA #$8C
+$B043: 85 21     STA $21 = #$B8
+
+>Text routine:
+$EDB5: B1 20     LDA ($20),Y @ $8C4A = #$89		//Load letter
+$EDB7: 85 26     STA $26 = #$1F					//Backup letter
+$EDB9: C9 FF     CMP #$FF						//Check if END
+$EDBB: F0 77     BEQ $EE34
+$EDBD: C9 00     CMP #$00						//Check if NEWLINE
+$EDBF: F0 4E     BEQ $EE0F
+$EDC1: C9 10     CMP #$10						//Check if NAME
+$EDC3: F0 A5     BEQ $ED6A
+$EDC5: 29 40     AND #$40						//Check if LETTER IS SPRITE ($40-$7F)
+
+$EDDC: A5 26     LDA $26 = #$89					//Load letter
+$EDDE: C9 24     CMP #$24						//Check if space
+$EDE0: F0 08     BEQ $EDEA
+$EDE2: C9 01     CMP #$01						//Check if ???
+$EDE4: F0 04     BEQ $EDEA
+
+$EDE6: 29 80     AND #$80						//Check if DAKUTEN/HANDAKUTEN (less than $80)
+\/
+$EE38: A5 26     LDA $26 = #$25					//Check which one
+$EE3A: C9 9F     CMP #$9F
+$EE3C: 30 09     BMI $EE47
+$EE47: A9 B8     LDA #$B8						//$2A holds the upper tile
+$EE49: 85 2A     STA $2A = #$00
+
+$EDE8: F0 4E     BEQ $EE38
+$EDEA: A5 26     LDA $26 = #$89					//Load letter
+$EDEC: 85 D8     STA $D8 = #$B6					//To VRAM buffer
+
+$F8A5: A0 00     LDY #$00						//Reset Y
+$F8A7: AD 02 20  LDA $2002 = #$86				//PPU register
+$F8AA: B1 00     LDA ($00),Y @ $00D5 = #$22		//Position HB
+$F8AC: 8D 06 20  STA $2006 = #$00
+$F8AF: C8        INY
+$F8B0: B1 00     LDA ($00),Y @ $00D6 = #$A4		//Position LB
+$F8B2: 8D 06 20  STA $2006 = #$00
+$F8B5: C8        INY
+$F8B6: B1 00     LDA ($00),Y @ $00D7 = #$01		//Lenght
+$F8B8: AA        TAX
+$F8B9: C8        INY
+$F8BA: B1 00     LDA ($00),Y @ $00D8 = #$89		//Print letter
+$F8BC: 8D 07 20  STA $2007 = #$24
+$F8BF: C8        INY
+$F8C0: CA        DEX							//Check if finished
+$F8C1: D0 F7     BNE $F8BA
+
+>The plan is to bankswitch every string that can't fit inside the original bank.
+
+2/6: Alright. Gonna change the font.
+>I think I'll need to extend diacritic capability for some chars.
+>Change of plans: I'm going to use MTE as with Ys. I don't need THAT much space.
+>Set up a small routine to make writing pointers less tedious.
+>First in-game text OK. Gotta remove that indent.
+>Indent removed for the BG letters. The sprite letters have a separate indent.
+
+>3/6: Must fix issues with the textbox.
